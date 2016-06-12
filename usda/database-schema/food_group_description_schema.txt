@@ -1,0 +1,2 @@
+FdGrp_Cd,String(4)
+FdGrp_Desc,String(60)

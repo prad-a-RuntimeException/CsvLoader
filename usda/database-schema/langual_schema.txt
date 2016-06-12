@@ -1,2 +1,2 @@
-FdGrp_Cd,String(4)
-FdGrp_Desc,String(60)
+ndb_no,String(5)
+factor_code,String(5)
