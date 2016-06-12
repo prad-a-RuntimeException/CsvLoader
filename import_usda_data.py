@@ -10,7 +10,8 @@ class SchemaDef:
 
 
 schema_data_map = {"FD_GROUP.txt": SchemaDef("food_group_description_schema.txt", "Food_Group_Description"),
-                   "FOOD_DES.txt": SchemaDef("food-description-schema.txt", "Food_Description"),
+                   "FOOD_DES.txt": SchemaDef("food_description_schema.txt", "Food_Description"),
+                   "LANGDESC.txt": SchemaDef("langual_description_schema.txt", "Langual"),
                    "LANGUAL.txt": SchemaDef("langual_schema.txt", "Langual_Mapping")}
 
 data_file_root = 'usda/data-files/'
