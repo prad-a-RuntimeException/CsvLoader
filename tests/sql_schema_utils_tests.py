@@ -7,7 +7,7 @@ from data_source import metadata
 class TestSqlSchemaUtils(TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.table = create_table("Test_Table", "resources/valid_data_schema.txt", get_engine())
+        cls.table = create_table("Test_Table", "tests/resources/valid_data_schema.txt", get_engine())
 
     def test_should_create_table(self):
         # Questionable way of creating table (once per execution, breaking the idea of unit)

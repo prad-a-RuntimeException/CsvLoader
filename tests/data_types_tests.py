@@ -26,7 +26,7 @@ class TestDataLoader(TestCase):
     def test_get_column_from_type_for_boolean(self):
         str = "Boolean"
         column_type = getColumnType(str)
-        self.assertEqual(column_type.__name__, "Boolean")
+        self.assertEqual(column_type.__name__, "CustomBoolean")
         print(column_type)
 
     def test_get_column_from_str(self):
@@ -40,7 +40,7 @@ class TestDataLoader(TestCase):
             Putting it all together. The Function is a composition of the other two functions.
         :return: List of column definitions.
         '''
-        definition = get_columns_from_definition("resources/valid_data_schema.txt")
+        definition = get_columns_from_definition("tests/resources/valid_data_schema.txt")
         self.assertTrue(len(definition), 11)
 
     def test_get_column_definitions_invalid_type(self):
@@ -48,4 +48,4 @@ class TestDataLoader(TestCase):
             Tests if the exception thrown is useful
         '''
         self.assertRaisesRegex(ValueError, ".*is not a valid.*", get_columns_from_definition,
-                               "resources/invalid_data_schema.txt")
+                               "tests/resources/invalid_data_schema.txt")

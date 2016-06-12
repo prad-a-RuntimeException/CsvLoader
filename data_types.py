@@ -3,10 +3,10 @@
     The main methods are  is getColumnsFromDefinition, please look at sample
     definition files and the unit tests for valid and invalid formats.
 """
-from sqlalchemy import Column, String
-from mysql_custom_datatypes.custom_datatypes import CustomBoolean, CustomDecimal
+from sqlalchemy import Column, String, DECIMAL
+from mysql_custom_datatypes.custom_datatypes import CustomBoolean, CustomFloat
 
-column_dict = {'String': String, 'Float': CustomDecimal, 'Boolean': CustomBoolean}
+column_dict = {'String': String, 'Float': CustomFloat, 'Boolean': CustomBoolean, 'Decimal': DECIMAL}
 
 
 def get_columns_from_definition(data_definition_file):
@@ -16,7 +16,7 @@ def get_columns_from_definition(data_definition_file):
 
 def __get_column(column_str):
     name_with_type = column_str.split(",")
-    return Column(name_with_type[0], __get_column_type(name_with_type[1]))
+    return Column(name_with_type[0].strip().lower(), __get_column_type(name_with_type[1]))
 
 
 def __get_column_type(column_type_str):

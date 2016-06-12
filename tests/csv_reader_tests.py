@@ -9,5 +9,5 @@ class CSVReaderTests(TestCase):
         self.assertEqual(delimiter, "~")
 
     def test_read_csv_file_with_provided_delimiter(self):
-        content = read_file(get_path("usda/data-files/NUTR_DEF.txt"),'^')
-        self.assertEqual(len(content), 150)
+        content = read_file(get_path("usda/data-files/NUTR_DEF.txt"), '^')
+        self.assertEqual(sum(1 for _ in content), 150)

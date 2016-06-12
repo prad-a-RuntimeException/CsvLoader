@@ -19,8 +19,8 @@ class TestImportTable(TestCase):
             pass
 
     def test_import_table(self):
-        import_table('./resources/test_schema_to_import.txt',
-                     './resources/test_data_to_import.txt',
+        import_table('tests/resources/test_schema_to_import.txt',
+                     'tests/resources/test_data_to_import.txt',
                      default_engine,
                      table_name='Food_Description')
 

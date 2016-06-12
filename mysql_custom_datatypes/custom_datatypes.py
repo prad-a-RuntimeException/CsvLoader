@@ -14,8 +14,8 @@ class CustomInt(types.TypeDecorator):
         return value
 
 
-class CustomDecimal(types.TypeDecorator):
-    impl = types.DECIMAL
+class CustomFloat(types.TypeDecorator):
+    impl = types.Float
 
     def process_bind_param(self, value, dialect):
         if type(value) is str:
