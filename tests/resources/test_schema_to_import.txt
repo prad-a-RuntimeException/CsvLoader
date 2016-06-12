@@ -1,0 +1,14 @@
+NDB_No,String(5)
+FdGrp_Cd,String(4)
+Long_Desc,String(200)
+Shrt_Desc,String(60)
+ComName,String(100)
+ManufacName,String(65)
+Survey,Boolean
+Ref_desc,String(135)
+Refuse,Float
+SciName,String(65)
+N_Factor,Float
+Pro_Factor,Float
+Fat_Factor,Float
+CHO_Factor,Float
